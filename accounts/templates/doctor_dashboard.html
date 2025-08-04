@@ -1,0 +1,7 @@
+<h2>Welcome, {{ user.first_name }} ({{ user.user_type }})</h2>
+<img src="{{ user.profile_pic.url }}" width="150">
+<ul>
+  <li>Email: {{ user.email }}</li>
+  <li>Address: {{ user.address_line1 }}, {{ user.city }}, {{ user.state }} - {{ user.pincode }}</li>
+</ul>
+<a href="{% url 'logout' %}">Logout</a>
