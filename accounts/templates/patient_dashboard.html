@@ -4,4 +4,5 @@
   <li>Email: {{ user.email }}</li>
   <li>Address: {{ user.address_line1 }}, {{ user.city }}, {{ user.state }} - {{ user.pincode }}</li>
 </ul>
+<a href="{% url 'blog_list' %}">See Blogs</a>
 <a href="{% url 'logout' %}">Logout</a>

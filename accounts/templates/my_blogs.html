@@ -1,0 +1,11 @@
+<h2>My Blogs</h2>
+{% for blog in blogs %}
+    <div>
+        <h3>{{ blog.title }}</h3>
+        <img src="{{ blog.image.url }}" width="150">
+        <p>{{ blog.summary }}</p>
+        <p>Status: {{ blog.draft|yesno:"Draft,Published" }}</p>
+    </div>
+{% empty %}
+    <p>No blogs yet.</p>
+{% endfor %}
